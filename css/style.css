@@ -8,10 +8,12 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     color: #fff;
 }
+/*fix backgroung full width*/
 .site-header{
     background-color: #333;
-    padding: 15px 0; 
+    width: 100%;
 }
+/*Better flex container to align logo & menu*/
 .container{
     display: flex;
     align-items: center;
@@ -20,48 +22,55 @@ body{
     margin: 0 auto;
    /* padding: 0 20px;*/
     width: 100%;
-    flex-direction: row;
+    padding: 15px 20px; /*re-enable*/
+    /*flex-direction: row;*/
+    flex-wrap: wrap;
 }
+
+/*Logo styling*/
 .logo img {
     border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
+    width: auto;
+    height: 50px;
     display: block;
 }
-.main-nav a{
+
+/*Navigation*/
+.nav-links li a{
     text-decoration: none;
     background-color: #4d0303ce;
     color: #fff;
-    padding: 8px 12px;
-    margin: 3px;
+    padding: 8px 16px;
     border-radius: 2rem;
-    font-weight: bold;
     transition: all 0.3s ease;
 }
-.main-nav a:hover{
-    background-color: #333;
+.nav-links a:hover{
+    background-color: #222;
     border-radius: 5px;
 }
 .nav-links{
     display: flex;
-    gap: 20px;
+    gap: 15px;
     list-style: none;
+    flex-wrap: wrap;
+    justify-content: flex-end;
 
 }
-
 
 /* MOBILE VIEW*/
 @media (max-width: 768px){
     .container{
-        flex-wrap: wrap;
-        margin-top: 10px;
-        flex-direction: column;
-        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
     }
-    .main-nav a{
-        padding: 10px 20px;
-        display: block;
-        text-align: center;
+    .nav-links{
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 10px;
+    }
+    .nav-links li a{
+        padding: 6px 12px;
+        font-size: 14px;
     }
 }
