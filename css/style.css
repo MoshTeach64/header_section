@@ -81,6 +81,9 @@ body {
     align-items: center;
     padding: 10px 10px;
   }
+  .logo img{
+    height: 100px
+  }
 
   .nav-links {
     gap: 8px;
